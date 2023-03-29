@@ -1,0 +1,374 @@
+//Design a database for Zen classes
+
+// inserting documents inside the users collection
+db.users.insertMany([
+  {
+    "user-id": 1,
+    "name": "Priya",
+    "email": "user1@gmail.com",
+    "mentor-id": 1,
+  },
+  {
+    "user-id": 2,
+    "name": "Manju",
+    "email": "user2@gmail.com",
+    "mentor-id": 1,
+  },
+  {
+    "user-id": 3,
+    "name": "Nethan",
+    "email": "user3@gmail.com",
+   " mentor-id": 3,
+  },
+  {
+    "user-id": 4,
+    "name": "Mathew",
+    "email": "user4@gmail.com",
+    "mentor-id": 2,
+  },
+  {
+    "user-id": 5,
+    "name": "Celin",
+    "email": "user5@gmail.com",
+    "mentor-id": 2,
+  },
+   {
+    "user-id": 6,
+    "name": "Priya",
+    "email": "user1@gmail.com",
+    "mentor-id": 1,
+  },
+  {
+    "user-id": 7,
+    "name": "Manju",
+    "email": "user2@gmail.com",
+    "mentor-id": 1,
+  },
+  {
+    "user-id": 8,
+    "name": "Nethan",
+    "email": "user3@gmail.com",
+   " mentor-id": 1,
+  },
+  {
+    "user-id": 9,
+    "name": "Mathew",
+    "email": "user4@gmail.com",
+    "mentor-id": 2,
+  },
+  {
+    "user-id": 10,
+    "name": "Celin",
+    "email": "user5@gmail.com",
+    "mentor-id": 2,
+  },
+   {
+    "user-id": 11,
+    "name": "Priya",
+    "email": "user1@gmail.com",
+    "mentor-id": 1,
+  },
+  {
+    "user-id": 12,
+    "name": "Manju",
+    "email": "user2@gmail.com",
+    "mentor-id": 1,
+  },
+  {
+    "user-id": 13,
+    "name": "Nethan",
+    "email": "user3@gmail.com",
+   " mentor-id": 1,
+  },
+  {
+    "user-id": 14,
+    "name": "Mathew",
+    "email": "user4@gmail.com",
+    "mentor-id": 2,
+  },
+  {
+    "user-id": 15,
+    "name": "Celin",
+    "email": "user5@gmail.com",
+    "mentor-id": 2,
+  },
+   {
+    "user-id": 16,
+    "name": "Priya",
+    "email": "user1@gmail.com",
+    "mentor-id": 1,
+  },
+  {
+    "user-id": 17,
+    "name": "Manju",
+    "email": "user2@gmail.com",
+    "mentor-id": 1,
+  },
+  {
+    "user-id": 18,
+    "name": "Nethan",
+    "email": "user3@gmail.com",
+   " mentor-id": 1,
+  },
+  {
+    "user-id": 19,
+    "name": "Mathew",
+    "email": "user4@gmail.com",
+    "mentor-id": 2,
+  },
+  {
+    "user-id": 20,
+    "name": "Celin",
+    "email": "user5@gmail.com",
+    "mentor-id": 2,
+  },
+]);
+// inserting documents inside the codekata collection
+db.codekata.insertMany([
+  {
+    "user-id": 1,
+    "no_of_problems_solved": 100,
+  },
+  {
+    "user-id": 2,
+    "no_of_problems_solved": 200,
+  },
+  {
+    "user-id": 3,
+    "no_of_problems_solved": 30,
+  },
+  {
+    "user-id": 4,
+    "no_of_problems_solved": 120,
+  },
+  {
+    "user-id": 5,
+    "no_of_problems_solved": 55,
+  },
+]);
+
+// inserting documents inside the attendance collection
+
+db.attendance.insertMany([
+  {
+    "user-id": 1,
+    "topic_id": 1,
+    "present": true,
+  },
+  {
+    "user-id": 2,
+    "topic_id": 2,
+   "present": true,
+  },
+  {
+    "user-id": 3,
+    "topic_id": 3,
+    "present": false,
+  },
+  {
+    "user-id": 4,
+    "topic_id": 4,
+    "present": false,
+  },
+  {
+    "user-id": 5,
+    "topic_id": 5,
+    "present": false,
+  },
+]);
+
+// inserting documents inside the topics collection
+db.topics.insertMany([
+  {
+    "topic_id": 1,
+    "topic": "HTML",
+    "topic_date": new Date("2022-10-01"),
+  },
+  {
+    "topic_id": 2,
+    "topic": "CSS",
+    "topic_date": new Date("2022-10-10"),
+  },
+  {
+    "topic_id": 3,
+    "topic": "Javascript",
+    "topic_date": new Date("2022-10-25"),
+  },
+  {
+    "topic_id": 4,
+    "topic": "React",
+    "topic_date": new Date("2022-11-10"),
+  },
+  {
+    "topic_id": 5,
+    "topic": "NodeJs",
+    "topic_date": new Date("2022-12-03"),
+  },
+]);
+
+// inserting documents inside the tasks collection
+db.tasks.insertMany([
+  {
+    "task_id": 1,
+    'topic_id': 1,
+    "user-id": 1,
+    "task": "HTML task",
+    "due_date": new Date("2022-10-05"),
+    "submitted": true,
+  },
+  {
+    "task_id": 2,
+    'topic_id': 2,
+    "user-id": 2,
+    "task": "CSS task",
+    "due_date": new Date("2022-10-15"),
+    "submitted": true,
+  },
+  {
+    "task_id": 3,
+    "topic_id": 3,
+    "user-id": 3,
+    "task": "Javascript task",
+    "due_date": new Date("2022-10-29"),
+    "submitted": false,
+  },
+  {
+    "task_id": 4,
+    "topic_id": 4,
+    "user-id": 4,
+    "task": "React task",
+    "due_date": new Date("2022-11-15"),
+    "submitted": false,
+  },
+  {
+    "task_id": 5,
+    "topic_id": 5,
+    "user-id": 5,
+    "task": "Node task",
+    "due_date": new Date("2022-12-10"),
+    'submitted': false,
+  },
+]);
+
+// inserting documents inside the companydrives collection
+db.company_drives.insertMany([
+  {
+    "drive-id": 1,
+    "drive_date": new Date("2022-10-17"),
+    "company_name": "Company A",
+  },
+  {
+    "drive-id": 1,
+    "drive_date": new Date("2022-10-20"),
+    "company_name": "Company B",
+  },
+  {
+    "drive-id": 2,
+    "drive_date": new Date("2022-11-25"),
+    "company_name": "Company C",
+  },
+  {
+    "drive-id": 3,
+    "drive_date": new Date("2022-11-15"),
+    "company_name": "Company D",
+  },
+  {
+    "drive-id": 4,
+    "drive_date": new Date("2022-12-29"),
+    "company_name": "Company E",
+  },
+]);
+
+// inserting documents inside the companydrives-students collection
+db.companydrives-students.insertMany([
+  {
+    "company_name":"Company E",
+    "user-id": 1,
+  },
+  {
+     "company_name":"Company A",
+    "user-id": 4,
+  },
+  {
+     "company_name": "Company B",
+    "user-id": 5,
+  },
+  {
+     "company_name": "Company classes",
+    "user-id": 6,
+  },
+  {
+     "company_name":"Company D",
+    "user-id": 7,
+  },
+  {
+    "company_name": "Company E",
+    "user-id": 10,
+  },
+  {
+     "company_name": "Company all",
+    "user-id": 15,
+  },
+  {
+     "company_name": "Company B",
+    "user-id": 12,
+  },
+  {
+     "company_name": "Company C",
+    "user-id": 2,
+  },
+  {
+     "company_name": "Company D",
+    "user-id": 1,
+  },
+]);
+
+// inserting documents inside the mentors collection
+db.mentors.insertMany([
+  {
+    "mentor-id": 1,
+    "mentor_name": "mentor1",
+  }
+  {
+    "mentor-id": 2,
+    "mentor_name": "mentor2",
+  },
+  {
+    "mentor-id": 3,
+    "mentor_name": "mentor3",
+  },
+]);
+
+---------------------------------------------------------------
+Question-1
+Find all the topics and tasks which are thought in the month of October
+
+db.task.aggregate({
+  $match: {
+    {$month: "$due_date"}=10
+  }
+})
+------------------------------------------------
+------------------------------------------------
+Question-2
+Find all the company drives and students who are appeared for the placement
+
+companydrives-students.aggregate([{
+$lookup: {
+From: ‘users’,
+LocalField: ‘user-id’,
+foreignField: ‘user-id’,
+as: ‘Student details’
+}}]);
+---------------------------------------------------
+---------------------------------------------------
+Question 3
+Find the number of problems solved by the user in codekata
+codekata.aggregate([{
+$lookup: {
+From: ‘users’,
+LocalField: ‘user-id’,
+foreignField: ‘user-id’,
+as: ‘Student details’
+}}]);
+----------------------------------------------
